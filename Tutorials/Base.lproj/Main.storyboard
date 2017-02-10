@@ -33,7 +33,7 @@
                                 <rect key="frame" x="16" y="38" width="343" height="629"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="VideoCell" rowHeight="104" id="53K-SA-aHQ" customClass="VideoCell">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="main" rowHeight="104" id="53K-SA-aHQ" customClass="VideoCell">
                                         <rect key="frame" x="0.0" y="28" width="343" height="104"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="53K-SA-aHQ" id="e4y-Xg-anq">
@@ -88,6 +88,7 @@
                                                 <constraint firstItem="JIg-zn-A4W" firstAttribute="bottom" secondItem="e4y-Xg-anq" secondAttribute="bottomMargin" id="vV1-4j-p00"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <outlet property="cellView" destination="JIg-zn-A4W" id="f4T-5v-dOm"/>
                                             <outlet property="descLbl" destination="w0D-Et-1HH" id="PyK-FD-tyo"/>
