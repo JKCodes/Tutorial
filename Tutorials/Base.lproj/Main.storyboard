@@ -112,11 +112,90 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="cja-2r-ZQY" id="SbK-Rz-Ycy"/>
+                        <segue destination="1Hb-id-O02" kind="presentation" identifier="VideoVC" id="SLy-jN-rM8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+        <!--VideoVC-->
+        <scene sceneID="B4S-V6-anH">
+            <objects>
+                <viewController id="1Hb-id-O02" customClass="VideoVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nxy-aN-BgN"/>
+                        <viewControllerLayoutGuide type="bottom" id="dWb-Nf-wSy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7P0-tU-B7O">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pRm-Xa-kJ4">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="274"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="274" id="gzv-iY-GVJ"/>
+                                </constraints>
+                            </webView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ko-js-weq">
+                                <rect key="frame" x="16" y="289" width="343" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="FW4-ur-6Y5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xHA-0R-RmH">
+                                <rect key="frame" x="16" y="355" width="343" height="99"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="99" id="ude-GS-Agv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="npR-7h-0rb">
+                                <rect key="frame" x="16" y="594" width="343" height="53"/>
+                                <color key="backgroundColor" red="0.85882352939999995" green="0.10980392160000001" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="2gR-NM-XKB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="21"/>
+                                <state key="normal" title="Close">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="donePressed:" destination="1Hb-id-O02" eventType="touchUpInside" id="TNr-wx-NrZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4ko-js-weq" firstAttribute="leading" secondItem="7P0-tU-B7O" secondAttribute="leadingMargin" id="1S3-RZ-ZYv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xHA-0R-RmH" secondAttribute="trailing" id="3fh-Q6-0To"/>
+                            <constraint firstItem="dWb-Nf-wSy" firstAttribute="top" secondItem="npR-7h-0rb" secondAttribute="bottom" constant="20" id="ACo-DG-W4W"/>
+                            <constraint firstItem="xHA-0R-RmH" firstAttribute="leading" secondItem="7P0-tU-B7O" secondAttribute="leadingMargin" id="LX3-N2-HTX"/>
+                            <constraint firstItem="pRm-Xa-kJ4" firstAttribute="leading" secondItem="7P0-tU-B7O" secondAttribute="leading" id="PBX-gp-wJb"/>
+                            <constraint firstItem="4ko-js-weq" firstAttribute="top" secondItem="pRm-Xa-kJ4" secondAttribute="bottom" constant="15" id="Pun-Uj-FaU"/>
+                            <constraint firstItem="xHA-0R-RmH" firstAttribute="top" secondItem="4ko-js-weq" secondAttribute="bottom" constant="15" id="RHx-vk-r54"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4ko-js-weq" secondAttribute="trailing" id="cMZ-Qt-wRQ"/>
+                            <constraint firstItem="pRm-Xa-kJ4" firstAttribute="top" secondItem="7P0-tU-B7O" secondAttribute="top" id="gpG-G6-73z"/>
+                            <constraint firstItem="npR-7h-0rb" firstAttribute="leading" secondItem="7P0-tU-B7O" secondAttribute="leadingMargin" id="pp4-y4-yxN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="npR-7h-0rb" secondAttribute="trailing" id="qQ4-zY-B2V"/>
+                            <constraint firstAttribute="trailing" secondItem="pRm-Xa-kJ4" secondAttribute="trailing" id="rwv-e9-bZr"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="descLbl" destination="xHA-0R-RmH" id="Es1-Yu-Jgy"/>
+                        <outlet property="titleLbl" destination="4ko-js-weq" id="UEr-YM-j5Z"/>
+                        <outlet property="webView" destination="pRm-Xa-kJ4" id="U34-JL-FP8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rnn-ZU-t0h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="868" y="139"/>
         </scene>
     </scenes>
 </document>
